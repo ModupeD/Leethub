@@ -16,15 +16,17 @@ var lengthOfLongestSubstring = function(s) {
 //         }
     
 //        return max
+ 
     
+// For this solution, i use the sliding windows approach
     let max = 0;
-    let windowStart = 0;
-    const soFar = {};
+    let windowStart = 0;// beginning of the window
+    const soFar = {};// hashmap to store the values and their occurences
     
-    for(let windowEnd =0; windowEnd < s.length; windowEnd++) {
+    for(let windowEnd = 0; windowEnd < s.length; windowEnd++) {
        let rightChar = s[windowEnd];
        soFar[rightChar] = soFar[rightChar] + 1 || 1
-        
+        //soFar[rightChar] stands the values in the second pointer, if it is more than one distinct character I the soFar[leftChar] until its just one distinct character
         while(soFar[rightChar] > 1) {
             let leftChar = s[windowStart];
             
