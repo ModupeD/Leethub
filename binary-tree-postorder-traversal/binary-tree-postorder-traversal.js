@@ -11,18 +11,18 @@
  * @return {number[]}
  */
 var postorderTraversal = function(root) {
-        if(!root) return [];
+    if(!root) return [];
     
     const result = [];
     
-    const inorder = (node) => {
+    const postorder = (node) => {
         if(!node) return null;
         
-        if(node.left) inorder(node.left);
-        if(node.right) inorder(node.right);
+        if(node.left) postorder(node.left);
+        if(node.right) postorder(node.right);
          result.push(node.val);
     }
     
-    inorder(root);
+    postorder(root);
     return result;
 };
