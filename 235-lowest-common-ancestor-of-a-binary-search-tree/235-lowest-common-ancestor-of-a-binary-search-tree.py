@@ -21,7 +21,9 @@ class Solution(object):
  are both greater than the root node, 8 is the lowest common ancestor because that is where the split occured
  
  if p = 7 and q =6, because one of them is equal to the root node none of the descendants would be an ancestor of that node itself. 
+ Time complexity is o(log n) because we only have to visit one node for every single level, so its the height of the tree
  
+ memory complexity is o(1) because we aren't really using data structures
         """
         cur = root
         
