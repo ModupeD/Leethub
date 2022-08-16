@@ -13,8 +13,16 @@ class Solution(object):
         
         #Keeping track of the first row
         row = 1
+        #keep track whether you are moving up or down in the row pattern
         up = True
-        
+        """
+         initialize an empty dictionary and loop through the string
+        {1: P}
+        {2:AP}
+        {3:C}
+        Just concatinate them together
+        Have a counter that keeps track of what the current row is, every letter we look at we increment the row at 1, it should increase or decrease whether we are moving up or down.
+         """
         for letter in s:
             #we are at row 1, we break off the first letter and store it in row 1
             row_map[row] += letter
