@@ -12,7 +12,7 @@ class Solution(object):
         """
         self.n = n
         celebrity_candidate = 0
-        for i in range(n):
+        for i in range(1,n):
             if knows(celebrity_candidate, i):
                 celebrity_candidate = i
         if self.is_celebrity(celebrity_candidate):
