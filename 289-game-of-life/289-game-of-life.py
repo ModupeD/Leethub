@@ -32,3 +32,5 @@ class Solution:
                      board[r][c] = 0
                 elif board[r][c] in [2,3]:
                     board[r][c] = 1
+                    
+#time and space complexity is 0(n * m)
